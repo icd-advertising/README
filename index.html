@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Creative Design & Advertising - Cinematic Brands</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #ff6b35;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            background: #e55a25;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
+        }
+
+        h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .accent {
+            color: #ff6b35;
+        }
+
+        .founder-section {
+            background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+            padding: 80px 20px;
+        }
+
+        .founder-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .founder-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-top: 20px;
+        }
+
+        .quote {
+            font-size: 24px;
+            font-style: italic;
+            color: #1a1a1a;
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .alt-background {
+            background: #f8f8f8;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+            <div class="logo">ICD</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#brand-philosophy">Brand</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#founder">Founder</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Cinematic Brands That <span class="accent">Dominate Attention</span></h1>
+        <p>Built from Missouri grit and cinematic ambition. We help businesses stop blending in and start owning their market.</p>
+        <button class="cta-button">Let's Build Your Legacy</button>
+    </section>
+
+    <!-- Brand Philosophy -->
+    <section id="brand-philosophy">
+        <h2>Brand Philosophy</h2>
+        <p class="section-description">Infinite Creative Design & Advertising creates cinematic brands for businesses that refuse to blend in. We combine strategic creativity, visual storytelling, and high-impact content systems to help ambitious businesses dominate attention and own their market.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>Strategic Creativity</h3>
+                <p>Every design decision is rooted in strategy. We don't create beautiful work in a vacuum—we engineer brands that align with your business goals and resonate with your audience.</p>
+            </div>
+            <div class="card">
+                <h3>Visual Storytelling</h3>
+                <p>Your brand has a story to tell. Through compelling visuals and narrative-driven design, we bring your brand's story to life in ways that connect emotionally with your customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Visibility Problem -->
+    <section id="visibility" class="alt-background">
+        <h2>The <span class="accent">Visibility Problem</span></h2>
+        <p class="section-description">In a market flooded with generic branding, standing out isn't optional—it's survival. Most businesses blend into the noise because they lack the strategic creativity and content systems needed to capture and hold attention. This isn't just about looking good. It's about engineering your brand to leave a mark.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>The Challenge</h3>
+                <p>You're competing against countless businesses with similar messaging and mediocre design. Your audience is overwhelmed, distracted, and skeptical.</p>
+            </div>
+            <div class="card">
+                <h3>Our Solution</h3>
+                <p>We build content systems engineered for attention, engagement, trust, and conversion. Strategic design meets storytelling. Result: brands that can't be ignored.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="services">
+        <h2>Core Services</h2>
+        <p class="section-description">We deliver premium creative systems designed for long-term growth and market dominance.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>Brand Strategy & Design</h3>
+                <p>From visual identity to brand positioning, we engineer cohesive brand systems that communicate your value and own your market space.</p>
+            </div>
+            <div class="card">
+                <h3>Content Systems</h3>
+                <p>Organized, structured content that builds authority and drives engagement. Every piece works together to tell your brand story.</p>
+            </div>
+            <div class="card">
+                <h3>Visual Storytelling</h3>
+                <p>High-impact visuals that capture attention and communicate your message. Photography, videography, and cinematic design that moves people.</p>
+            </div>
+            <div class="card">
+                <h3>Conversion Optimization</h3>
+                <p>Strategic design isn't just beautiful—it converts. We build systems that guide your audience from awareness to action.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Infinite Content Engine -->
+    <section id="content-engine" class="alt-background">
+        <h2>The Infinite Content Engine</h2>
+        <p class="section-description">We don't just create content. We build systems. Organized deliverables, structured communication, and premium creative systems engineered for consistent, long-term growth.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>Organized Deliverables</h3>
+                <p>Every project includes clear, structured outputs. You always know what you're getting and when you're getting it.</p>
+            </div>
+            <div class="card">
+                <h3>Structured Communication</h3>
+                <p>Transparent collaboration from start to finish. Regular updates, feedback loops, and strategic guidance every step of the way.</p>
+            </div>
+            <div class="card">
+                <h3>Premium Creative Systems</h3>
+                <p>Your brand gets a complete system—not just individual assets. This infrastructure ensures consistency and impact across all channels.</p>
+            </div>
+            <div class="card">
+                <h3>Long-Term Growth</h3>
+                <p>We build with scale in mind. Your brand systems adapt and grow as your business evolves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Transformations -->
+    <section id="transformations">
+        <h2>Brand <span class="accent">Transformations</span></h2>
+        <p class="section-description">See how we've helped businesses transform their brands and dominate their markets.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>Before</h3>
+                <p><strong>Challenge:</strong> Generic branding, lost in the market, low customer engagement.</p>
+                <p><strong>Result:</strong> Blending in with competitors, low conversion rates, struggling growth.</p>
+            </div>
+            <div class="card">
+                <h3>After</h3>
+                <p><strong>Solution:</strong> Strategic brand redesign, cinematic content system, conversion-focused design.</p>
+                <p><strong>Result:</strong> Market authority, increased engagement, sustainable business growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder" class="founder-section">
+        <div class="founder-content">
+            <h2>Built from <span class="accent">Missouri Grit</span></h2>
+            <p class="quote">"This isn't generic branding. This is identity engineered to leave a mark."</p>
+            <p class="section-description">Shane McCoy founded Infinite Creative Design & Advertising to help businesses stop blending in and start dominating attention. Combining strategic creativity, visual storytelling, and premium content systems, we've built a creative powerhouse dedicated to one mission: engineering brands that can't be ignored.</p>
+            <h4 class="founder-name">Shane McCoy</h4>
+            <p>Founder & Creative Director</p>
+        </div>
+    </section>
+
+    <!-- Client Experience -->
+    <section id="client-experience" class="alt-background">
+        <h2>Client Experience</h2>
+        <p class="section-description">Every project includes organized deliverables, structured communication, and premium creative systems designed for long-term growth.</p>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h3>Strategic Consultation</h3>
+                <p>We start by understanding your business, market, and vision. No generic templates—just strategic clarity.</p>
+            </div>
+            <div class="card">
+                <h3>Collaborative Process</h3>
+                <p>Your feedback shapes every decision. Regular check-ins ensure we're building exactly what you need.</p>
+            </div>
+            <div class="card">
+                <h3>Premium Deliverables</h3>
+                <p>High-quality files, organized systems, and comprehensive documentation. Everything you need to execute.</p>
+            </div>
+            <div class="card">
+                <h3>Ongoing Support</h3>
+                <p>Your brand is an asset we protect. We're here for guidance, optimization, and growth as your business evolves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="final-cta" class="hero">
+        <h2>Let's Build a Brand They Can't Ignore</h2>
+        <p>Ready to dominate your market? Let's transform your brand into a powerhouse.</p>
+        <button class="cta-button">Start Your Transformation</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Infinite Creative Design & Advertising</h3>
+            <p>Strategic creativity. Visual storytelling. High-impact brands.</p>
+            <p>© 2026 Infinite Creative Design & Advertising. All rights reserved.</p>
+            <p>Built with vision. Engineered for impact.</p>
+            <p><a href="mailto:hello@infinitecreative.com">Get in Touch</a></p>
+        </div>
+    </footer>
+</body>
+</html>
